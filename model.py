@@ -7,7 +7,11 @@ import io
 
 
 # Load the model
+import tensorflow as tf
+
 model = tf.keras.models.load_model(r"C:\Users\dhara\Desktop\keras_model.h5")
+print(model.summary())
+
 
 # Define class labels based on your training
 class_names = ['Normal', 'Defective']  # Modify if you used different class names
