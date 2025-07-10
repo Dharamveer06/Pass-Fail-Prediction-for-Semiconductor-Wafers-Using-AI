@@ -8,7 +8,7 @@ import io
 
 # Load the model
 import tensorflow as tf
-model = tf.keras.models.load_model("model.keras")
+model = tf.keras.models.load_model(".keras")
 
 print(model.summary())
 
