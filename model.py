@@ -8,8 +8,19 @@ import io
 
 # Load the model
 
+import tensorflow as tf
+import os
 
-    
+print("Files in current dir:", os.listdir("."))
+
+if os.path.exists("my_model.keras"):
+    model = tf.keras.models.load_model("my_model.keras")
+    print("Model loaded successfully!")
+else:
+    print("Model file does not exist!")
+
+
+   
 import tensorflow as tf
 model = tf.keras.models.load_model("my_model.keras")
 
