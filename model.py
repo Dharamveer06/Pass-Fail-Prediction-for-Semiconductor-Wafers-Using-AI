@@ -9,7 +9,7 @@ import h5py
 path = "model/my_model.keras"
 
 if not os.path.exists("model/my_model.keras"):
-    print(f"Model file not found: {model/my_model.keras}")
+    print("Model file not found: {model/my_model.keras}")
 else:
     print("Model file found: {model/my_model.keras}")
     try:
