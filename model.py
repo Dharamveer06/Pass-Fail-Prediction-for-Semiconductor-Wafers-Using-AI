@@ -13,7 +13,7 @@ print("Does my_model.keras exist?", os.path.exists("my_model.keras"))
 
 # Load the model
 import tensorflow as tf
-model = tf.keras.models.load_model("my_model.keras")
+model = tf.keras.models.load_model(my_model.keras.h5)
 
 print(model.summary())
 
