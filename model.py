@@ -3,15 +3,13 @@ import tensorflow as tf
 import numpy as np # type: ignore
 from PIL import Image # type: ignore
 import io
-import os
-print(os.listdir(".")
 
 
 
 
 # Load the model
 import tensorflow as tf
-model = tf.keras.models.load_model("my_model.keras")
+model = tf.keras.models.load_model(".keras")
 
 print(model.summary())
 
