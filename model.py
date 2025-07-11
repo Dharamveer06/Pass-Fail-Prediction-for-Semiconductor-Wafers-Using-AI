@@ -13,7 +13,7 @@ import os
 script_dir = os.path.dirname(__file__)
 
 # Your model filename
-MODEL_FILENAME = "/my_model.keras"
+MODEL_FILENAME = "model/my_model.keras"
 
 # Absolute path to the model file
 model_path = os.path.join(script_dir, MODEL_FILENAME)
@@ -21,12 +21,12 @@ model_path = os.path.join(script_dir, MODEL_FILENAME)
 # -------------------------------
 # Load the model safely
 # -------------------------------
-if not os.path.exists("/my_model.keras"):
-    st.error(f"🚫 Model file not found at:\n\n{"/my_model.keras}")
+if not os.path.exists("model/my_model.keras"):
+    st.error(f"🚫 Model file not found at:\n\n{"model/my_model.keras}")
     st.stop()
 
 try:
-    model = tf.keras.models.load_model("/my_model.keras")
+    model = tf.keras.models.load_model("model/my_model.keras")
     st.success("✅ Model loaded successfully!")
     print(model.summary())
 except Exception as e:
