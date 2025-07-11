@@ -6,7 +6,7 @@ import io
 import os
 
 print("Current directory files:", os.listdir("."))
-print("Does my_model.keras exist?", os.path.exists("my_model.keras"))
+print("Does my_model.keras exist?", os.path.exists("my_model.keras.h5"))
 
 
 
