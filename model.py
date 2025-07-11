@@ -3,24 +3,6 @@ import tensorflow as tf
 import numpy as np # type: ignore
 from PIL import Image # type: ignore
 import io
-import os
-
-path = "model/my_model.keras.h5"
-
-if not os.path.exists("model/my_model.keras.h5"):
-    print("🚫 File does not exist:", "model/my_model.keras.h5")
-else:
-    print("✅ File exists:", "model/my_model.keras.h5")
-    print("Size:", os.path.getsize("model/my_model.keras.h5"), "bytes")
-
-    import h5py
-
-    try:
-        with h5py.File("model/my_model.keras.h5", "r") as f:
-            print("✅ File is a valid HDF5 file.")
-            print("Keys:", list(f.keys()))
-    except OSError as e:
-        print("🚫 Not a valid HDF5 file:", e)
 
 # Load the model
 
