@@ -6,7 +6,7 @@ import io
 import os
 
 print("Current directory files:", os.listdir("."))
-print("Does my_model.keras exist?", os.path.exists("my_model.keras.h5"))
+print("Does my_model.keras exist?", os.path.exists("my_model.kera"))
 
 
 
@@ -18,14 +18,14 @@ import os
 
 print(os.listdir("."))
 
-if os.path.exists("my_model.keras.h5"):
-    model = tf.keras.models.load_model("my_model.keras.h5")
+if os.path.exists("my_model.kera"):
+    model = tf.keras.models.load_model("my_model.kera")
     print("Model loaded successfully!")
 else:
     print("Model file does not exist!")
     
 import tensorflow as tf
-model = tf.keras.models.load_model("my_model.keras.h5")
+model = tf.keras.models.load_model("my_model.kera")
 
 print(model.summary())
 
