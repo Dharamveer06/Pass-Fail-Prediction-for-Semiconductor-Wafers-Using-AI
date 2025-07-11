@@ -3,6 +3,21 @@ import tensorflow as tf
 import numpy as np # type: ignore
 from PIL import Image # type: ignore
 import io
+import os
+
+path = "model/my_model.keras.h5"
+
+if not os.path.exists(path):
+    print(f"Model file not found: {"model/my_model.keras.h5}")
+else:
+    print(f"Model file found: {"model/my_model.keras.h5}")
+    import h5py
+    try:
+        with h5py.File("model/my_model.keras.h5", "r") as f:
+            print("HDF5 file successfully opened.")
+            print("Keys:", list(f.keys()))
+    except OSError as e:
+        print("OSError:", e)
 
 
 # Load the model
