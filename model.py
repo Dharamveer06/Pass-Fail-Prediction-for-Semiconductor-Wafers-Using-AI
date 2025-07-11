@@ -3,12 +3,6 @@ import tensorflow as tf
 import numpy as np # type: ignore
 from PIL import Image # type: ignore
 import io
-import os
-
-if not os.path.exists("model/my_model.keras.h5"):
-    print("Model file not found!")
-else:
-    print("Model file found.")
 
 
 # Load the model
