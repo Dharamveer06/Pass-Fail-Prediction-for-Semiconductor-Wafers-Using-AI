@@ -10,7 +10,7 @@ import io
 
    
 import tensorflow as tf
-model = tf.keras.models.load_model("model")
+model = tf.keras.models.load_model("model/model/my_model.keras.h5")
 
 print(model.summary())
 
