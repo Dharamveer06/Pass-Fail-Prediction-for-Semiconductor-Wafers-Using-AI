@@ -13,7 +13,7 @@ model_path = "model/keras_model.h5"
 
 # Check if model file exists
 if not os.path.exists("model/keras_model.h5"):
-    st.error(f"🚫 Model file `{my_model.keras}` not found in your project directory.")
+    st.error(f"🚫 Model file `{model/keras_model.h5}` not found in your project directory.")
     st.stop()
 
 # Try loading the model safely
