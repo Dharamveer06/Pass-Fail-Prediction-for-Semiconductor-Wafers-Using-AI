@@ -22,7 +22,7 @@ model_path = os.path.join(script_dir, MODEL_FILENAME)
 # Load the model safely
 # -------------------------------
 if not os.path.exists("model/my_model.keras"):
-    st.error(f"🚫 Model file not found at:\n\n{"my_model.keras}")
+    st.error(f"🚫 Model file not found at:\n\n{my_model.keras})
     st.stop()
 
 try:
