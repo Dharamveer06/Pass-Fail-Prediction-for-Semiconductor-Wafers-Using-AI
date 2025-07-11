@@ -3,6 +3,10 @@ import tensorflow as tf
 import numpy as np # type: ignore
 from PIL import Image # type: ignore
 import io
+import os
+
+print(os.listdir("."))
+
 
 
 
