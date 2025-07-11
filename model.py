@@ -25,7 +25,7 @@ else:
 
    
 import tensorflow as tf
-model = tf.keras.models.load_model("model/my_model.keras")
+model = tf.keras.models.load_model("model/my_model.keras.h5")
 
 print(model.summary())
 
