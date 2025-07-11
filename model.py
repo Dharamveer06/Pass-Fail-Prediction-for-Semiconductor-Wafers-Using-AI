@@ -6,14 +6,14 @@ import io
 import os
 import h5py
 
-path = "model/my_model.keras.h5"
+path = "model/my_model.keras"
 
-if not os.path.exists("model/my_model.keras.h5"):
-    print(f"Model file not found: {model/my_model.keras.h5}")
+if not os.path.exists("model/my_model.keras"):
+    print(f"Model file not found: {model/my_model.keras}")
 else:
-    print("Model file found: {model/my_model.keras.h5}")
+    print("Model file found: {model/my_model.keras}")
     try:
-        with h5py.File("model/my_model.keras.h5", "r") as f:
+        with h5py.File("model/my_model.keras", "r") as f:
             print("HDF5 file opened successfully.")
             print("Keys inside the file:", list(f.keys()))
     except OSError as e:
@@ -25,7 +25,7 @@ else:
 
    
 import tensorflow as tf
-model = tf.keras.models.load_model("model/my_model.keras.h5")
+model = tf.keras.models.load_model("model/my_model.keras")
 
 print(model.summary())
 
