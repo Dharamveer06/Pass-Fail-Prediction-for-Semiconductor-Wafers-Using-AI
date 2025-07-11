@@ -6,14 +6,14 @@ import io
 import os
 import h5py
 
-path = "model/my_model.keras"
+path = "model/my_model.keras.h5"
 
-if not os.path.exists("model/my_model.keras"):
-    print("Model file not found: {model/my_model.keras}")
+if not os.path.exists("model/my_model.keras.h5"):
+    print("Model file not found: {model/my_model.keras.h5}")
 else:
-    print("Model file found: {model/my_model.keras}")
+    print("Model file found: {model/my_model.keras.h5}")
     try:
-        with h5py.File("model/my_model.keras", "r") as f:
+        with h5py.File("model/my_model.keras.h5", "r") as f:
             print("HDF5 file opened successfully.")
             print("Keys inside the file:", list(f.keys()))
     except OSError as e:
