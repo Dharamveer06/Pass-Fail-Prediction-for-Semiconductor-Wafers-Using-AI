@@ -18,7 +18,7 @@ if not os.path.exists("my_model.keras.h5"):
 
 # Try loading the model safely
 try:
-    model = tf.keras.models.load_model("my_model.keras.h5")
+    model = tf.keras.models.load_model(""my_model.h5")
     st.success("✅ Model loaded successfully!")
     # Optional: print model summary in console (not on Streamlit)
     print(model.summary())
