@@ -11,7 +11,7 @@ st.write("Files in current directory:", os.listdir("."))
 # Check if model file exists
 model_path = "my_model.keras"
 
-if not os.path.exists(model_path):
+if not os.path.exists(my_model.h5):
     st.error(f"🚫 Model file `{model_path}` not found in your project directory.")
     st.stop()
 
