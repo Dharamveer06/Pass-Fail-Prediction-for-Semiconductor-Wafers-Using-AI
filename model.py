@@ -17,7 +17,8 @@ if not os.path.exists(model_path):
 
 # Try loading the model safely
 try:
-    model = tf.keras.models.load_model(my_model.keras.h5)
+    # No quotes = wrong. Correct:
+    model = tf.keras.models.load_model(model_path)
     st.success("✅ Model loaded successfully!")
     # Optional: print model summary in console (not on Streamlit)
     print(model.summary())
