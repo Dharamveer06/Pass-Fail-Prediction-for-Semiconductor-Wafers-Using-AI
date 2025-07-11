@@ -1,24 +1,26 @@
-import streamlit as st # type: ignore
+import streamlit as st 
 import tensorflow as tf 
 import numpy as np # type: ignore
 from PIL import Image # type: ignore
 import io
 import os
-import h5py
 
 path = "model/my_model.keras.h5"
 
 if not os.path.exists("model/my_model.keras.h5"):
-    print("Model file not found: {model/my_model.keras.h5}")
+    print("🚫 File does not exist:", "model/my_model.keras.h5")
 else:
-    print("Model file found: {model/my_model.keras.h5}")
+    print("✅ File exists:", "model/my_model.keras.h5")
+    print("Size:", os.path.getsize("model/my_model.keras.h5"), "bytes")
+
+    import h5py
+
     try:
         with h5py.File("model/my_model.keras.h5", "r") as f:
-            print("HDF5 file opened successfully.")
-            print("Keys inside the file:", list(f.keys()))
+            print("✅ File is a valid HDF5 file.")
+            print("Keys:", list(f.keys()))
     except OSError as e:
-        print(f"OSError while opening the file: {e}")
-
+        print("🚫 Not a valid HDF5 file:", e)
 
 # Load the model
 
