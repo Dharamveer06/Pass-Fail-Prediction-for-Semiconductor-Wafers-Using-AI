@@ -8,16 +8,16 @@ import os
 # Check files in current directory
 st.write("Files in current directory:", os.listdir("."))
 
-# Check if model file exists
+# Path to model file
 model_path = "my_model.keras"
 
-if not os.path.exists(my_model.h5):
+# Check if model file exists
+if not os.path.exists(model_path):
     st.error(f"🚫 Model file `{model_path}` not found in your project directory.")
     st.stop()
 
 # Try loading the model safely
 try:
-    # No quotes = wrong. Correct:
     model = tf.keras.models.load_model(model_path)
     st.success("✅ Model loaded successfully!")
     # Optional: print model summary in console (not on Streamlit)
