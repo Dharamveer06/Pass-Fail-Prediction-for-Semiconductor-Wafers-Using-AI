@@ -9,7 +9,7 @@ import os
 st.write("Files in current directory:", os.listdir("."))
 
 # Path to model file
-model_path = "my_model.h5"
+model_path = "my_model.keras"
 
 # Check if model file exists
 if not os.path.exists("my_model.h5"):
@@ -18,7 +18,7 @@ if not os.path.exists("my_model.h5"):
 
 # Try loading the model safely
 try:
-    model = tf.keras.models.load_model("my_model.h5")
+    model = tf.keras.models.load_model("my_model.keras")
     st.success("✅ Model loaded successfully!")
     # Optional: print model summary in console (not on Streamlit)
     print(model.summary())
