@@ -3,6 +3,10 @@ import tensorflow as tf
 import numpy as np # type: ignore
 from PIL import Image # type: ignore
 import io
+import os
+
+print("Current directory files:", os.listdir("."))
+print("Does my_model.keras exist?", os.path.exists("my_model.keras"))
 
 
 
