@@ -4,20 +4,20 @@ import numpy as np # type: ignore
 from PIL import Image # type: ignore
 import io
 import os
+import h5py
 
 path = "model/my_model.keras.h5"
 
-if not os.path.exists(path):
+if not os.path.exists("model/my_model.keras.h5"):
     print(f"Model file not found: {model/my_model.keras.h5}")
 else:
-    print("Model file found: {model/my_model.keras.h5}")
-    import h5py
+    print(f"Model file found: {model/my_model.keras.h5}")
     try:
         with h5py.File("model/my_model.keras.h5", "r") as f:
-            print("HDF5 file successfully opened.")
-            print("Keys:", list(f.keys()))
+            print("HDF5 file opened successfully.")
+            print("Keys inside the file:", list(f.keys()))
     except OSError as e:
-        print("OSError:", e)
+        print(f"OSError while opening the file: {e}")
 
 
 # Load the model
