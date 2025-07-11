@@ -13,7 +13,7 @@ model_path = "my_model.keras"
 
 # Check if model file exists
 if not os.path.exists(my_model.keras):
-    st.error(f"🚫 Model file `{model_path}` not found in your project directory.")
+    st.error(f"🚫 Model file `{my_model.keras}` not found in your project directory.")
     st.stop()
 
 # Try loading the model safely
