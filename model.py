@@ -3,29 +3,15 @@ import tensorflow as tf
 import numpy as np # type: ignore
 from PIL import Image # type: ignore
 import io
-import os
-
-print("Current directory files:", os.listdir("."))
-print("Does my_model.keras exist?", os.path.exists("my_model.kera"))
-
 
 
 
 # Load the model
 
-import tensorflow as tf
-import os
 
-print(os.listdir("."))
-
-if os.path.exists("my_model.kera"):
-    model = tf.keras.models.load_model("my_model.kera")
-    print("Model loaded successfully!")
-else:
-    print("Model file does not exist!")
     
 import tensorflow as tf
-model = tf.keras.models.load_model("my_model.kera")
+model = tf.keras.models.load_model("my_model.keras")
 
 print(model.summary())
 
