@@ -9,7 +9,7 @@ import os
 st.set_page_config(page_title="Semiconductor Wafer Detector", layout="centered")
 
 # Path to your model file
-model_path = "saved_model"
+model_path = "saved_model/wafer_cnn_model.h5"
 # Load model safely
 if not os.path.exists(model_path):
     st.error(f"Model file not found at {model_path}")
