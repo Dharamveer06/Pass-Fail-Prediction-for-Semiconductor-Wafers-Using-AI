@@ -5,8 +5,6 @@ from PIL import Image
 import io
 import os
 
-# ✅ MUST be first Streamlit command:
-st.set_page_config(page_title="Semiconductor Wafer Detector", layout="centered")
 
 # Path to your model file
 model_path = "saved_model/wafer_cnn_model.h5"
